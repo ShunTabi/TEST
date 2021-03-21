@@ -24,6 +24,10 @@ SECRET_KEY = 'a3__bbwp1tb79)=8$z4&w%-q-5q9t7#pjmw)u^k82p$8w%=dgb'
 
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
+try:
+    from .local_settings import *
+except ImportError:
+    pass
 
 ALLOWED_HOSTS = []
 
